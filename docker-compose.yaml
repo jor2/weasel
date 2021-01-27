@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  backend:
+    build: .
+    ports:
+      - 5000:5000
+    image: jor2/weasel:latest
+
+  mongo:
+    container_name: mongo
+    ports:
+      - 27017:27017
+    image: mongo:latest
+    restart: always
